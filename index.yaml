@@ -3,7 +3,7 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2021-06-07T17:31:03.021649184+02:00"
+    created: "2021-06-10T18:29:13.086795255+02:00"
     description: A Helm chart for Kubernetes
     digest: 38155fda6322bf4bba357d17d56cab8534d990a17d506d0665bbf62803ff4121
     name: nginx
@@ -11,4 +11,26 @@ entries:
     urls:
     - https://jaimedevivar.github.io/my-chart-repo/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2021-06-07T17:31:03.020729648+02:00"
+  vclass:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-06-10T18:29:13.087796794+02:00"
+    description: A Helm chart for Kubernetes
+    digest: adf1dd0e780077ec2310a56eba356f4e13282cd2ae19cf9e5a35739fca1fe605
+    name: vclass
+    type: application
+    urls:
+    - https://jaimedevivar.github.io/my-chart-repo/vclass-0.1.0.tgz
+    version: 0.1.0
+  vcpe:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2021-06-10T18:29:13.088761486+02:00"
+    description: A chart for using as vcpe in OSM. TFM Jaime de Vivar
+    digest: 693b04081dc0e802908f2cef3e6e3f07bdc920e5348d70f45a0af84b0db3f721
+    name: vcpe
+    type: application
+    urls:
+    - https://jaimedevivar.github.io/my-chart-repo/vcpe-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-06-10T18:29:13.083202566+02:00"
