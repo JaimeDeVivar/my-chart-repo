@@ -3,13 +3,13 @@ kind: Pod
 metadata:
   name: "{{ include "vcpe.fullname" . }}-test-connection"
   labels:
-    {{- include "vcpe.labels" . | nindent 4 }}
+{{ include "vcpe.labels" . | indent 4 }}
   annotations:
-    "helm.sh/hook": test
+    "helm.sh/hook": test-success
 spec:
   containers:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "vcpe.fullname" . }}:{{ .Values.service.port }}']
+      args:  ['{{ include "vcpe.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never

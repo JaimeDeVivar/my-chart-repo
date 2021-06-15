@@ -3,13 +3,13 @@ kind: Pod
 metadata:
   name: "{{ include "vclass.fullname" . }}-test-connection"
   labels:
-    {{- include "vclass.labels" . | nindent 4 }}
+{{ include "vclass.labels" . | indent 4 }}
   annotations:
-    "helm.sh/hook": test
+    "helm.sh/hook": test-success
 spec:
   containers:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "vclass.fullname" . }}:{{ .Values.service.port }}']
+      args:  ['{{ include "vclass.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never

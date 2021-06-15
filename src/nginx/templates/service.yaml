@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ include "nginx.fullname" . }}
   labels:
-    {{- include "nginx.labels" . | nindent 4 }}
+{{ include "nginx.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "nginx.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/name: {{ include "nginx.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

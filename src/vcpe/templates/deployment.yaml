@@ -3,28 +3,26 @@ kind: Deployment
 metadata:
   name: {{ include "vcpe.fullname" . }}
   labels:
-    {{- include "vcpe.labels" . | nindent 4 }}
+{{ include "vcpe.labels" . | indent 4 }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
-  {{- end }}
   selector:
     matchLabels:
-      {{- include "vcpe.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/name: {{ include "vcpe.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
-      annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
-        {{- include "vcpe.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/name: {{ include "vcpe.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+      annotations:
+        k8s.v1.cni.cncf.io/networks: extnet
     spec:
-      {{- with .Values.imagePullSecrets }}
+    {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
-      {{- end }}
-      serviceAccountName: {{ include "vcpe.serviceAccountName" . }}
+    {{- end }}
+      serviceAccountName: {{ template "vcpe.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -45,21 +43,18 @@ spec:
               command:
               - echo
               - "alive"
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+          # readinessProbe:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.affinity }}
+    {{- with .Values.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.tolerations }}
+    {{- end }}
+    {{- with .Values.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
-      {{- end }}
+    {{- end }}

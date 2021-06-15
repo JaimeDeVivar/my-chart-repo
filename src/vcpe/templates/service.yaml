@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ include "vcpe.fullname" . }}
   labels:
-    {{- include "vcpe.labels" . | nindent 4 }}
+{{ include "vcpe.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
