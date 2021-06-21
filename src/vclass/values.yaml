@@ -4,7 +4,7 @@
 replicaCount: 1
 
 image:
-  repository: gabrielfd/vnf-img
+  repository: jaimedevivar/vnf-img
   tag: latest
   pullPolicy: IfNotPresent
 

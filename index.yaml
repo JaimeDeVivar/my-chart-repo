@@ -3,7 +3,7 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: "1"
-    created: "2021-06-15T16:07:11.118008508+02:00"
+    created: "2021-06-21T17:50:48.429981141+02:00"
     digest: a47cf58147e04e35ef0bf8da875991f1a280d2fb65ba1ef7996dbb2e4436fa58
     name: nginx
     urls:
@@ -12,21 +12,23 @@ entries:
   vclass:
   - apiVersion: v1
     appVersion: "1"
-    created: "2021-06-15T16:07:11.118447632+02:00"
+    created: "2021-06-21T17:50:48.430424334+02:00"
     description: A chart for using as vclass VNF
-    digest: 2a03a96bb4f209c8b5c79772a2c6f1619b80a918e2480a6bea77617c143280a3
+    digest: 95fb82d8e47e98425aebe5064383e8246abbdd1dfa0f81fba0d3c75e6777cbad
     name: vclass
+    type: application
     urls:
     - https://jaimedevivar.github.io/my-chart-repo/vclass-1.1.4.tgz
     version: 1.1.4
   vcpe:
   - apiVersion: v1
     appVersion: "1"
-    created: "2021-06-15T16:07:11.121767222+02:00"
+    created: "2021-06-21T17:50:48.430786297+02:00"
     description: A chart for using as vcpe VNF
-    digest: 85334ffa36c746eec7b67d13e6bc6db01c52a06e75ec1c779e4073341557013a
+    digest: f87630b9f0f1c2be7f5d5e141a238219e91d6be841b4538d0ea4115cc9ac8635
     name: vcpe
+    type: application
     urls:
     - https://jaimedevivar.github.io/my-chart-repo/vcpe-1.1.5.tgz
     version: 1.1.5
-generated: "2021-06-15T16:07:11.117226009+02:00"
+generated: "2021-06-21T17:50:48.428743255+02:00"
