@@ -41,13 +41,13 @@ spec:
           livenessProbe:
             exec:
               command:
-                - echo 
-		- "alive"
+                - echo
+                - "alive"
           readinessProbe:
             exec:
               command:
-                - ping 
-		- 8.8.8.8
+                - ping
+                - 8.8.8.8
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
