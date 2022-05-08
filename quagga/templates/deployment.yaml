@@ -33,6 +33,21 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: K8S_QUAGGA_INTERFACE
+              value: eth0
+            - name: K8S_QUAGGA_PORTALNET
+              value: 172.17.0.0/16
+            - name: K8S_QUAGGA_CONTAINERNET
+              value: 172.17.0.0/16
+            - name: K8S_QUAGGA_PORTALGW
+              value: 192.168.64.0/24
+            - name: K8S_QUAGGA_HOMENET
+              value: 192.168.64.0/24
+            - name: K8S_QUAGGA_ROUTERID
+              value: 192.168.64.2
+            - name: K8S_QUAGGA_PASSWORD
+              value: ospf1
           command: [ "sh", "-ce", "tail -f /dev/null" , "export K8S_QUAGGA_INTERFACE=eth0", "export K8S_QUAGGA_PORTALNET=172.17.0.0/16", "export K8S_QUAGGA_CONTAINERNET=172.17.0.0/16", "export K8S_QUAGGA_PORTALGW=192.168.64.0/24" , "export K8S_QUAGGA_HOMENET=192.168.64.0/24" , "export K8S_QUAGGA_ROUTERID=192.168.64.2" , "export K8S_QUAGGA_PASSWORD=ospf1" ]
           ports:
             - name: http
