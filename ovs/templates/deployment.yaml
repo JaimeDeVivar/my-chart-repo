@@ -44,9 +44,10 @@ spec:
                 - echo
                 - "alive"
           readinessProbe:
-            httpGet:
-              path: /
-              port: http
+            exec:
+              command:
+                - echo
+                - "alive"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
