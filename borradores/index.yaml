@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  vclass:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-27T19:22:29.664139193+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 30753d4d1d02b09a42a1f6e95f5c86d657caeea0d21305f32702914ac6853858
+    name: vclass
+    type: application
+    urls:
+    - https://jaimedevivar.github.io/my-chart-repo/charts/vclass-0.1.0.tgz
+    version: 0.1.0
+  vcpe:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-27T19:22:29.664962083+02:00"
+    description: A Helm chart for Kubernetes
+    digest: b384dd555ab12cad534a05eb324f1fd89dcb3d43182f1d9f2728bd6636de804f
+    name: vcpe
+    type: application
+    urls:
+    - https://jaimedevivar.github.io/my-chart-repo/charts/vcpe-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-04-27T19:22:29.663565924+02:00"

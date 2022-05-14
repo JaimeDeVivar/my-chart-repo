@@ -1,0 +1,326 @@
+1  config_desktop 
+    2  clean_and_halt 
+    3  sudo systemctl stop apache2.service
+    4  sudo systemctl disable apache2.service
+    5  osm
+    6  groups
+    7  lxc list
+    8  sudo lxc list
+    9  sudo adduser upm lxd
+   10  mkdir osm
+   11  cd osm
+   12  wget https://osm-download.etsi.org/ftp/osm-10.0-ten/install_osm.sh
+   13  chmod +x install_osm.sh
+   14  ./install_osm.sh
+   15  less ../.local/bin/chardetect 
+   16  /usr/local/bin/clean_and_halt
+   17  sudo dhclient eth1
+   18  ifconfig eth
+   19  ifconfig eth1
+   20  ping 192.168.99.110
+   21  watch kubectl get pods -n osm
+   22  kubectl exec apiVersion: apps/v1
+   23  kind: Deployment
+   24  metadata:
+   25  spec:
+   26  kubectl exec quagga-8474c79dd8-kw69w ls
+   27  kubectl version
+   28  kubectl -n kube-system -l=k8s-app=kube-dns get pods
+   29  kubectl get pods --all-namespaces
+   30  kubectl get deployments --all-namespaces
+   31  kubectl -n kube-system get secret
+   32  kubectl describe secret default-token-ft44r    
+   33  kubectl describe secret default-token-ft44r  
+   34  kubectl create serviceaccount dashboard-admin-sa
+   35  kubectl create clusterrolebinding dashboard-admin-sa 
+   36  kubectl create clusterrolebinding dashboard-admin-sa --clusterrole=cluster-admin --serviceaccount=default:dashboard-admin-sa
+   37  kubectl get secrets
+   38  kubectl describe secret dashboard-admin-sa-token-rpcmj
+   39  history
+   40  cd Desktop/
+   41  helm create src/vclass
+   42  mkdir src
+   43  helm create src/vclass
+   44  helm create src/vcpe
+   45  cd src/
+   46  cd vcpe
+   47  helm repo index --url https://jaimedevivar.github.io/my-chart-repo .
+   48  osm repo-add --type helm-chart --description "My Helm Charts" mygitrepo https://jaimedevivar.github.io/my-chart-repo
+   49  cd
+   50  cd Desktop/
+   51  osm nfpkg-create knf-vcpe.yaml 
+   52  cd vcpe/
+   53  osm nfpkg-create knf-vcpe.yaml 
+   54  cd Desktop/vcpe/
+   55  osm nfpkg-create knf-vcpe.yaml 
+   56  ls 
+   57  osm package-translate -h
+   58  osm package-translate .
+   59  osm nfpkg-create knf-vcpe.yaml 
+   60  osm package-translate .
+   61  osm nspkg-create ns.yaml 
+   62  osm package-translate .
+   63  clear
+   64  osm package-translate .
+   65  osm nfpkg-create knf-vclass.yaml 
+   66  osm nspkg-create ns.yaml 
+   67  wget https://jaimedevivar.github.io/my-chart-repo/index.yaml
+   68  cd ..
+   69  cd  osm/
+   70  ls
+   71  cd ..
+   72  osm nfpkg-create vclass.yaml 
+   73  osm nfpkg-create vcpe.yaml 
+   74  cd funciona/osm/
+   75  osm nspkg-create ns.yaml 
+   76  cd ..
+   77  cd charts/my-chart-repo/
+   78  helm repo update
+   79  cd
+   80  cd Desktop/
+   81  osm nfpkg-create vclass.yaml 
+   82  osm nfpkg-create vcpe.yaml 
+   83  osm nspkg-create ns.yaml 
+   84  osm ns-create --ns_name nginx --nsd_name nginx_ns --vim_account dummy-vim
+   85  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy-vim
+   86  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   87  helm repo update
+   88  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   89  helm repo list
+   90  helm repo add https://jaimedevivar.github.io/my-chart-repo/
+   91  helm repo add tfm https://jaimedevivar.github.io/my-chart-repo/
+   92  helm repo list
+   93  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   94  osm nspkg-create ns.yaml 
+   95  osm nfpkg-create vclass.yaml 
+   96  osm nfpkg-create vcpe.yaml 
+   97  osm nspkg-create ns.yaml 
+   98  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   99  helm update
+  100  helm repo update
+  101  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+  102  helm install 
+  103  helm3 install 
+  104  apt-get helm3
+  105  apt-get install helm3
+  106  sudo su
+  107  helm install 
+  108  helm3 install tfm https://jaimedevivar.github.io/my-chart-repo/
+  109  helm repo update
+  110  helm3 install tfm https://jaimedevivar.github.io/my-chart-repo/
+  111  helm3 install tfm https://jaimedevivar.github.io/my-chart-repo/vcpe
+  112  helm3 install tfm https://jaimedevivar.github.io/my-chart-repo/vcpe-0.1.0.tgz
+  113  Error: failed to download "https://jaimedevivar.github.io/my-chart-repo/vcpe-0.1.0.tgz" (hint: running `helm repo update` may help)
+  114  helm search tfm
+  115  helm repo list
+  116  helm repo add tfm https://jaimedevivar.github.io/my-chart-repo
+  117  helm repo add quagga https://jaimedevivar.github.io/my-chart-repo
+  118  helm repo update
+  119  helm install quagga quagga
+  120  helm repo update
+  121  helm repo list
+  122  helm install quagga --generate-name
+  123  osm repo-add --type helm-chart --description My helm repo mygitrepo https://jaimedevivar.github.io/my-chart-repo
+  124  osm repo-add --type helm-chart --description "My helm repo" mygitrepo https://jaimedevivar.github.io/my-chart-repo
+  125  cd charts/my-chart-repo/
+  126  helm repo index --url https://jaimedevivar.github.io/my-chart-repo --merge index.yaml .
+  127  git add .
+  128  git commit -m " vclass y vcpe"
+  129  git push
+  130  helm repo install quagga
+  131  helm install quagga --generate-name
+  132  history
+  133  helm repo add mygitrepo https://jaimedevivar.github.io/my-chart-repo
+  134  helm repo update
+  135  helm install mygitrepo --generate-name
+  136  helm install stable
+  137  helm install stable --generate-name
+  138  helm get values stable
+  139  helm get stable values 
+  140  helm get all mygitrepo 
+  141  helm repo list
+  142  helm --debug install mygitrepo --generate-name
+  143  helm repo add prueba jaimedevivar.github.io/my-chart-repo
+  144  helm --debug install --repo mygitrepo --generate-name
+  145  helm --debug install mygitrepo ./vclass-0.1.0.tgz --generate-name
+  146  helm --debug install mygitrepo ./vclass-0.1.0.tgz 
+  147  cd 
+  148  cd Desktop/
+  149  git clone --recursive https://osm.etsi.org/gitlab/vnf-onboarding/osm-packages
+  150  git clone  https://osm.etsi.org/gitlab/vnf-onboarding/osm-packages
+  151  cd osm-packages/openldap_
+  152  cd osm-packages/openldap_knf/
+  153  osm openldap_vnfd.yaml 
+  154* osm nfpkg-create openldap_vnfd.yaml helm --debug install mygitrepo ./vclass-0.1.0.tgz
+  155  cd ..
+  156  cd openldap_ns/
+  157  osm nspkg-create openldap_nsd.yaml 
+  158  cat README.md 
+  159  helm --debug install mygitrepo ./vclass-0.1.0.tgz --generate-name
+  160  helm --debug install mygitrepo ./vclass-0.1.0.tgz 
+  161  helm --debug install mygitrepo ./vclass-0.1.0.tgz
+  162  helm --debug install mygitrepo ./vcpe-0.1.0.tgz
+  163  helm update
+  164  helm repo update
+  165  helm --debug install mygitrepo ./vcpe-0.1.0.tgz
+  166  helm --debug install mygitrepo --generate-name
+  167  helm --debug install mygitrepo ./vcpe-0.1.0.tgz
+  168  helm list repo
+  169  helm list r
+  170  helm repo list
+  171  helm list
+  172  helm --debug install mygitrepo vcpe-0.1.0.tgz
+  173  helm --debug install mygitrepo /vcpe-0.1.0.tgz
+  174  helm --debug install mygitrepo ./vcpe-0.1.0.tgz
+  175  helm search mygitrepo/vcpe-0.1.0.tgz
+  176  helm search repo mygitrepo/vcpe-0.1.0.tgz
+  177  helm search repo mygitrepo/
+  178  helm --debug install mygitrepo ./vcpe
+  179  helm --debug install mygitrepo /vcpe
+  180  helm --debug install mygitrepo vcpe
+  181  helm --debug install mygitrepo mygitrepo/vcpe
+  182  helm --debug install vcpe mygitrepo/vcpe
+  183  helm list
+  184  helm search repo tfm/
+  185  helm repo list
+  186  helm --debug install quagga quagga/vcpe
+  187  history
+upm@vnxsdnlab:~/Desktop/osm-packages/openldap_ns$ 
+ kubectl get pods
+   24  kubectl get deployments
+   25  kubectl cluster-info
+   26  cd Desktop/
+   27  kubectl apply -f k8s-quagga.yaml 
+   28  kubectl get deployments
+   29  kubectl get nodes
+   30  kubectl get node
+   31  kubectl get deployments
+   32  kubectl describe deployments
+   33  kubectl get deployments
+   34  kubectl get pods
+   35  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.0/aio/deploy/recommended.yaml
+   36  kubectl get deployments
+   37  kubectl get pods
+   38  ps
+   39  ps -f
+   40  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.0/aio/deploy/recommended.yaml
+   41  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.0/aio/deploy/recommended.yaml --validate=false
+   42  kubectl get deployments
+   43  kubectl get pod
+   44  kubectl proxy
+   45  kubectl proxy --help
+   46  kubectl proxy
+   47  hostory
+
+
+upm@vnxsdnlab:~/Desktop$ history
+    1  config_desktop 
+    2  clean_and_halt 
+    3  sudo systemctl stop apache2.service
+    4  sudo systemctl disable apache2.service
+    5  osm
+    6  groups
+    7  lxc list
+    8  sudo lxc list
+    9  sudo adduser upm lxd
+   10  mkdir osm
+   11  cd osm
+   12  wget https://osm-download.etsi.org/ftp/osm-10.0-ten/install_osm.sh
+   13  chmod +x install_osm.sh
+   14  ./install_osm.sh
+   15  less ../.local/bin/chardetect 
+   16  /usr/local/bin/clean_and_halt
+   17  sudo dhclient eth1
+   18  ifconfig eth
+   19  ifconfig eth1
+   20  ping 192.168.99.110
+   21  watch kubectl get pods -n osm
+   22  kubectl exec apiVersion: apps/v1
+   23  kind: Deployment
+   24  metadata:
+   25  spec:
+   26  kubectl exec quagga-8474c79dd8-kw69w ls
+   27  kubectl version
+   28  kubectl -n kube-system -l=k8s-app=kube-dns get pods
+   29  kubectl get pods --all-namespaces
+   30  kubectl get deployments --all-namespaces
+   31  kubectl -n kube-system get secret
+   32  kubectl describe secret default-token-ft44r    
+   33  kubectl describe secret default-token-ft44r  
+   34  kubectl create serviceaccount dashboard-admin-sa
+   35  kubectl create clusterrolebinding dashboard-admin-sa 
+   36  kubectl create clusterrolebinding dashboard-admin-sa --clusterrole=cluster-admin --serviceaccount=default:dashboard-admin-sa
+   37  kubectl get secrets
+   38  kubectl describe secret dashboard-admin-sa-token-rpcmj
+   39  history
+   40  cd Desktop/
+   41  helm create src/vclass
+   42  mkdir src
+   43  helm create src/vclass
+   44  helm create src/vcpe
+   45  cd src/
+   46  cd vcpe
+   47  helm repo index --url https://jaimedevivar.github.io/my-chart-repo .
+   48  osm repo-add --type helm-chart --description "My Helm Charts" mygitrepo https://jaimedevivar.github.io/my-chart-repo
+   49  cd
+   50  cd Desktop/
+   51  osm nfpkg-create knf-vcpe.yaml 
+   52  cd vcpe/
+   53  osm nfpkg-create knf-vcpe.yaml 
+   54  cd Desktop/src/
+   55  helm lint vclass
+   56  helm lint vcpe
+   57  helm lint vcpe/
+   58  clear
+   59  cd Desktop/quaggaRepo/
+   60  helm repo index
+   61  helm repo index .
+   62  ls
+   63  git checkout -b gh-pages
+   64  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   65  history
+   66  cd ..
+   67  osm nfpkg-create vclass.yaml
+   68  osm nfpkg-create vcpe.yaml
+   69  osm nspkg-create ns.yaml
+   70  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   71  osm nfpkg-create vclass.yaml
+   72  osm nfpkg-create vcpe.yaml
+   73  osm nspkg-create ns.yaml
+   74  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   75  osm nfpkg-create vclass.yaml
+   76  osm nfpkg-create vcpe.yaml
+   77  osm nspkg-create ns.yaml
+   78  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   79  osm repo-list
+   80  osm repo-add --type helm-chart --description "TFM repo" tfm https://jaimedevivar.github.io/my-chart-repo
+   81  osm repo-list
+   82  osm repo-show tfm
+   83  osm repo-show mygitrepo
+   84  helm show chart mygitrepo/vclass
+   85  helm show chart mygitrepo/vcpe
+   86  helm update
+   87  osm repo-show stable
+   88  osm nfpkg-create vclass.yaml
+   89  osm nfpkg-create vcpe.yaml
+   90  osm nspkg-create ns.yaml
+   91  osm ns-create --ns_name vCPE --nsd_name vCPE --vim_account dummy_vim
+   92  history
+upm@vnxsdnlab:~/Desktop$ 
+
+
+env:
+        		- name: K8S_QUAGGA_INTERFACE
+          		value: eth0
+        		- name: K8S_QUAGGA_PORTALNET
+          		value: 172.17.0.0/16
+        		- name: K8S_QUAGGA_CONTAINERNET
+           		value: 172.17.0.0/16
+        		- name: K8S_QUAGGA_PORTALGW
+          		value: 192.168.64.0/24
+       		  - name: K8S_QUAGGA_HOMENET
+          		value: 192.168.64.0/24
+       		  - name: K8S_QUAGGA_ROUTERID
+         		  value: 192.168.64.2
+        		- name: K8S_QUAGGA_PASSWORD
+          		value: ospf1

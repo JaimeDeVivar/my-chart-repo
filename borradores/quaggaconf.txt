@@ -1,0 +1,623 @@
+    1  lsb_release -a
+    2  apt-get update && apt-get install -y lsb-release && apt-get clean all
+    3  lsb_release -a
+    4  clear
+    5  sudo apt-get install quagga && sudo mkdir -p /var/log/quagga && sudo chown quagga:quagga /var/log/quagga
+    6  apt install sudo
+    7  apt install su
+    8  echo "net.ipv4.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf
+    9  echo "net.ipv4.conf.default.forwarding=1" | sudo tee -a /etc/sysctl.conf
+   10  sed 's/#net.ipv6.conf.all.forwarding=1/net.ipv6.conf.all.forwarding=1/g' /etc/sysctl.conf | sudo tee /etc/sysctl.conf
+   11  echo "net.ipv6.conf.default.forwarding=1" | sudo tee -a /etc/sysctl.conf
+   12  sudo sysctl -p
+   13  echo "net.ipv4.conf.all.mc_forwarding=1" | sudo tee -a /etc/sysctl.conf
+   14  echo "net.ipv4.conf.default.mc_forwarding=1" | sudo tee -a /etc/sysctl.conf
+   15  sudo sysctl -p
+   16  sudo nano /etc/quagga/bgpd.conf
+   17  sudo nano /etc/quagga/isisd.conf
+   18  sudo nano /etc/quagga/ospf6d.conf
+   19  sudo nano /etc/quagga/ospfd.conf
+   20  sudo nano /etc/quagga/pimd.conf
+   21  sudo nano /etc/quagga/ripd.conf
+   22  sudo nano /etc/quagga/ripngd.conf
+   23  sudo nano /etc/quagga/vtysh.conf
+   24  sudo nano /etc/quagga/zebra.conf
+   25  apt install nano
+   26  sudo nano /etc/quagga/bgpd.conf
+   27  sudo touch /etc/quagga/bgpd.conf
+   28  mkdir /etc/quagga
+   29  sudo touch /etc/quagga/bgpd.conf
+   30  sudo touch /etc/quagga/isisd.conf
+   31  sudo touch /etc/quagga/ospfd.conf
+   32  sudo touch /etc/quagga/pimd.conf
+   33  sudo touch /etc/quagga/ripd.conf
+   34  sudo touch /etc/quagga/ripngd.conf
+   35  sudo touch /etc/quagga/vtysh.conf
+   36  sudo touch /etc/quagga/zebra.conf
+   37  sudo chown quagga:quagga /etc/quagga/bgpd.conf && sudo chmod 640 /etc/quagga/bgpd.conf
+   38  sudo chown quagga:quagga /etc/quagga/isisd.conf && sudo chmod 640 /etc/quagga/isisd.conf
+   39  sudo chown quagga:quagga /etc/quagga/ospf6d.conf && sudo chmod 640 /etc/quagga/ospf6d.conf
+   40  sudo chown quagga:quagga /etc/quagga/ospfd.conf && sudo chmod 640 /etc/quagga/ospfd.conf
+   41  sudo chown quagga:quagga /etc/quagga/pimd.conf && sudo chmod 640 /etc/quagga/pimd.conf
+   42  sudo chown quagga:quagga /etc/quagga/ripd.conf && sudo chmod 640 /etc/quagga/ripd.conf
+   43  sudo chown quagga:quagga /etc/quagga/ripngd.conf && sudo chmod 640 /etc/quagga/ripngd.conf
+   44  sudo chown quagga:quaggavty /etc/quagga/vtysh.conf && sudo chmod 660 /etc/quagga/vtysh.conf
+   45  stat /etc/quagga
+   46  stat /etc/quagga/vtysh.conf 
+   47  sudo unlink /etc/systemd/system/multi-user.target.wants/bgpd.service
+   48  sudo unlink /etc/systemd/system/multi-user.target.wants/isisd.service
+   49  sudo unlink /etc/systemd/system/multi-user.target.wants/ospf6d.service
+   50  sudo unlink /etc/systemd/system/multi-user.target.wants/ospfd.service
+   51  sudo unlink /etc/systemd/system/multi-user.target.wants/pimd.service
+   52  sudo unlink /etc/systemd/system/multi-user.target.wants/ripd.service
+   53  sudo unlink /etc/systemd/system/multi-user.target.wants/ripngd.service
+   54  sudo unlink /etc/systemd/system/multi-user.target.wants/zebra.service
+   55  which bgpd.service
+   56  apt install locate
+   57  locate bgpd.service
+   58  systemctl restart zebrea.service
+   59  apt install systemctl
+   60  systemctl restart zebrea.service
+   61  service --status-all
+   62  apt install yum
+   63  sudo apt-get install -y yum
+   64  cat /etc/quagga/zebra.conf 
+   65  ifconfig
+   66  apt install net-tools
+   67  ifconfig
+   68  apt install vim
+   69  vim /etc/quagga/zebra.conf 
+   70  vim /etc/quagga/ospfd.conf 
+   71  vim /etc/quagga/daemons
+   72  ls -l /etc/quagga/
+   73  systemctl start zebra
+   74  systemctl status zebra.service
+   75  systemctl status zebra
+   76  history
+   77  apt install zebra
+   78  apt install frr
+   79  systemctl status zebra
+   80  history
+   81  service --status-all
+   82  clear
+   83  sudo apt-get update
+   84  sudo apt-get -y install frr
+   85  systemctl start frr.service
+   86  service frr status
+   87  frr
+   88  /etc/init.d/frr 
+   89  /etc/init.d/frr start
+   90  /etc/init.d/frr stop
+   91  systemctl status frr
+   92  systemctl start frr
+   93  systemctl status frr
+   94  vtysh
+   95  locate frr
+   96  cd
+   97  ls
+   98  cd ..
+   99  ls
+  100  locate frr
+  101  clear
+  102  systemctl status frr
+  103  cd /var/log/
+  104  ls
+  105  cd frr/
+  106  ls
+  107  cd ..
+  108  vat dpkg.log 
+  109  cat dpkg.log 
+  110  lear
+  111  clear
+  112  cat lastlog 
+  113  cat alternatives.log 
+  114  clear
+  115  vrouter log show
+  116  clear
+  117  cd
+  118  ls
+  119  systemctl restart frr
+  120  cd /etc/frr/
+  121  cat daemons 
+  122  vim daemons 
+  123  systemctl restart frr
+  124  vtysh
+  125  sytemctl status frr
+  126  systemctl status frr
+  127  systemctl enable frr
+  128  systemctl status frr
+  129  systemctl restart frr
+  130  vtysh
+  131  clear
+  132  cat vtysh.conf 
+  133  cat frr.conf 
+  134  vim daemons 
+  135  clear
+  136  cat daemons 
+  137  ew
+  138  vtysh -b
+  139  cat /etc/pam.d/frr 
+  140  clear
+  141  vim daemons 
+  142  vtysh
+  143  service restart frr
+  144  service frr restart
+  145  vtysh
+  146  ps
+  147  vtysh
+  148  cd
+  149  stat /var/run/frr
+  150  sudo vtysh
+  151  ls /etc/init.d/
+  152  systemctl start zebra
+  153  history
+  154  clear
+  155  service frr status
+  156  history
+  157  history | grep status
+  158  service --status-all
+  159  systemctl start frr
+  160  systemctl status frr
+  161  service --status-all
+  162  /etc/init.d/frr start
+  163  psafx
+  164  ps afx
+  165  show watchfrr
+  166  apt-get install watchfrr
+  167  cat /etc/quagga/zebra.conf 
+  168  vim /etc/frr/zebra.conf
+  169  cat /etc/quagga/ospfd.conf 
+  170  vim /etc/frr/ospfd.conf
+  171  /etc/init.d/frr start
+  172  /etc/init.d/frr stop
+---------------------------------------------------------------
+
+zebra.conf
+interface eth0
+ ip address 172.17.0.0/24
+ ipv6 nd suppress-ra
+interface lo
+ip forwarding
+line vty
+
+ospfd.conf
+interface eth0
+interface lo
+router ospf
+ network 172.17.0.0/24 area 0.0.0.0
+line vty
+
+
+
+192.168.64.2 
+
+
+
+echo "log stdout" > /etc/quagga/vtysh.conf
+echo "hostname prueba" >> /etc/quagga/vtysh.conf
+echo "interface docker0" >> /etc/quagga/vtysh.conf
+echo " no link-detect" >> /etc/quagga/vtysh.conf
+echo "interface eth0" >> /etc/quagga/vtysh.conf
+echo " ip ospf authentication-key ospf1" >> /etc/quagga/vtysh.conf
+echo " no link-detect" >> /etc/quagga/vtysh.conf
+echo "interface lo" >> /etc/quagga/vtysh.conf
+echo " no link-detect" >> /etc/quagga/vtysh.conf
+echo "interface sit0" >> /etc/quagga/vtysh.conf
+echo " no link-detect" >> /etc/quagga/vtysh.conf
+echo "router ospf" >> /etc/quagga/vtysh.conf
+echo " ospf router-id 192.168.64.2" >> /etc/quagga/vtysh.conf
+echo " log-adjacency-changes detail" >> /etc/quagga/vtysh.conf
+echo " redistribute static" >> /etc/quagga/vtysh.conf
+echo " network 172.17.0.0/16 area 0.0.0.0" >> /etc/quagga/vtysh.conf
+echo " network 192.168.64.0/24 area 0.0.0.0" >> /etc/quagga/vtysh.conf
+echo " area 0.0.0.0 authentication" >> /etc/quagga/vtysh.conf
+echo " default-information originate" >> /etc/quagga/vtysh.conf
+echo "ip route 172.17.0.0/16 192.168.64.0/24" >> /etc/quagga/vtysh.conf
+echo "ip forwarding" >> /etc/quagga/vtysh.conf
+echo "line vty" >> /etc/quagga/vtysh.conf
+echo "!"  >> /etc/quagga/vtysh.conf
+echo "router bgp 65100" >> /etc/quagga/vtysh.conf
+echo " bgp router-id 172.17.0.1" >> /etc/quagga/vtysh.conf
+echo " address-family ipv4" >> /etc/quagga/vtysh.conf
+echo "  network 172.17.0.0/24" >> /etc/quagga/vtysh.conf
+
+AS5835-54X(config-router)# bgp router-id 2.2.2.2
+AS5835-54X(config-router)# neighbor 10.0.0.0 remote-as 65100
+AS5835-54X(config-router)# address-family ipv4
+AS5835-54X(config-router-af)# network 2.2.2.2/32
+AS5835-54X(config-router-af)# end
+
+echo "router bgp 65100" >> /etc/quagga/bgpd.conf
+echo " bgp router-id 172.17.0.1" >> /etc/quagga/bgpd.conf
+echo " address-family ipv4" >> /etc/quagga/bgpd.conf
+echo "  network 172.17.0.0/24" >> /etc/quagga/bgpd.conf
+
+echo "router bgp 65100" >> /etc/quagga/zebra.conf
+echo " bgp router-id 172.17.0.1" >> /etc/quagga/zebra.conf
+echo " address-family ipv4" >> /etc/quagga/zebra.conf
+echo "  network 172.17.0.0/24" >> /etc/quagga/zebra.conf
+
+echo "router bgp 65100" >> /etc/quagga/ospfd.conf
+echo " bgp router-id 172.17.0.1" >> /etc/quagga/ospfd.conf
+echo " address-family ipv4" >> /etc/quagga/ospfd.conf
+echo "  network 172.17.0.0/24" >> /etc/quagga/ospfd.conf
+
+
+
+!
+! Zebra configuration saved from vty
+!   2022/04/15 07:44:50
+!
+password ospf1
+log stdout
+!
+interface docker0
+ no link-detect
+!
+interface eth0
+ no link-detect
+!
+interface lo
+ no link-detect
+!
+interface sit0
+ no link-detect
+!
+interface veth1a90e84
+ no link-detect
+!
+interface veth3e97eb5
+ no link-detect
+!
+interface veth172b6fa
+ no link-detect
+!
+interface veth8572b43
+ no link-detect
+!
+ip route 172.17.0.0/16 192.168.64.0/24
+!
+ip forwarding
+!
+!
+line vty
+!
+
+
+
+
+cat zebra.conf.sav 
+   1 cat ospfd.conf
+   2 clear
+   3 vtysh
+   4 cat /etc/hosts
+   5 echo "127.0.0.1    prueba" >> /etc/hosts 
+   6 cat /etc/hosts 
+   7 vtysh
+   8 vtysh -w
+   9 vtysh --help
+  10 vtysh --daemon zebra
+  11 vyths
+  12 vtysh
+  13 echo "hostname prueba" >> /etc/quagga/ospfd.conf 
+  14 cat ospfd.conf
+  15 vtysh
+  16 clear
+  17 echo "" > vtysh.conf
+  18 chmod +x vtysh.conf 
+  19 echo "hostname prueba" vtysh.conf 
+  20 echo "hostname prueba" >> vtysh.conf 
+  21 vtysh
+  22 cd /etc/quagga/
+  23 ls
+  24 clear
+  25 vtysh
+  26 cd
+  27 ls
+  28 cd ..
+  29 ls
+  30 cat k8s-quagga 
+  31 ?1;2c?1;2c?1;2cclear
+  32 clear
+  33 vtysh
+  34 cd /etc/quagga/
+  35 cat vtysh.conf 
+  36 echo "" > bgpd.conf
+  37 ls
+  38 chmod +x .
+  39 ls
+  40 chmod +x bgpd.conf 
+  41 chmod +x ospfd.conf
+  42 chmod +x zebra.conf
+  43 ls
+  44 vtysh
+  45 clear
+  46 cd /etc/init.d
+  47 ls
+  48 /etc/init.d/bgpd start
+  49 /etc/init.d/bgpd 
+  50 cat bgpd 
+  51 ./bgpd 
+  52 bgpd
+  53 clear
+  54 ifconfig
+  55 vtysh
+  56 cd /etc/quagga/
+  57 ls
+  58 ls -l
+  59 chown quagga vtysh.conf 
+  60 chown quagga bgpd.conf 
+  61 ls -l
+  62 sudo chown quagga bgpd.conf 
+  63 apk add sudo
+  64 apk updare
+  65 apk update
+  66 echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+  67 apk update
+  68 clear
+  69 cat zebra.conf
+  70 clear
+  71 cat vtysh.conf 
+  72 ls -l
+  73 su 
+  74 su chown quagga /etc/quagga/bgpd.conf 
+  75 su root chown quagga /etc/quagga/bgpd.conf 
+  76 chown quagga /etc/quagga/bgpd.conf 
+  77 ls
+  78 ls -l
+  79 su
+  80 chgrp quagga bgpd.conf 
+  81 ls
+  82 ls -l
+  83 chgrp quagga vtysh.conf 
+  84 ls -l
+  85 clear
+  86 vtysh
+  87 echo "log stdout" > /etc/quagga/vtysh.conf
+  88 echo "hostname prueba" >> /etc/quagga/vtysh.conf
+  89 echo "interface docker0" >> /etc/quagga/vtysh.conf
+  90 echo " no link-detect" >> /etc/quagga/vtysh.conf
+  91 echo "interface eth0" >> /etc/quagga/vtysh.conf
+  92 echo " ip ospf authentication-key ospf1" >> /etc/quagga/vtysh.conf
+  93 echo " no link-detect" >> /etc/quagga/vtysh.conf
+  94 echo "interface lo" >> /etc/quagga/vtysh.conf
+  95 echo " no link-detect" >> /etc/quagga/vtysh.conf
+  96 echo "interface sit0" >> /etc/quagga/vtysh.conf
+  97 echo " no link-detect" >> /etc/quagga/vtysh.conf
+  98 echo "router ospf" >> /etc/quagga/vtysh.conf
+  99 echo " ospf router-id 192.168.64.2" >> /etc/quagga/vtysh.conf
+ 100 echo " log-adjacency-changes detail" >> /etc/quagga/vtysh.conf
+ 101 echo " redistribute static" >> /etc/quagga/vtysh.conf
+ 102 echo " network 172.17.0.0/16 area 0.0.0.0" >> /etc/quagga/vtysh.conf
+ 103 echo " network 192.168.64.0/24 area 0.0.0.0" >> /etc/quagga/vtysh.conf
+ 104 echo " area 0.0.0.0 authentication" >> /etc/quagga/vtysh.conf
+ 105 echo " default-information originate" >> /etc/quagga/vtysh.conf
+ 106 echo "ip route 172.17.0.0/16 192.168.64.0/24" >> /etc/quagga/vtysh.conf
+ 107 echo "ip forwarding" >> /etc/quagga/vtysh.conf
+ 108 echo"line vty" >> /etc/quagga/vtysh.conf
+ 109 echo"!" " >> /etc/quagga/vtysh.conf
+ 110 adsifja
+ 111 echo "log stdout" > /etc/quagga/vtysh.conf
+ 112 echo "hostname prueba" >> /etc/quagga/vtysh.conf
+ 113 echo "interface docker0" >> /etc/quagga/vtysh.conf
+ 114 echo " no link-detect" >> /etc/quagga/vtysh.conf
+ 115 echo "interface eth0" >> /etc/quagga/vtysh.conf
+ 116 echo " ip ospf authentication-key ospf1" >> /etc/quagga/vtysh.conf
+ 117 echo " no link-detect" >> /etc/quagga/vtysh.conf
+ 118 echo "interface lo" >> /etc/quagga/vtysh.conf
+ 119 echo " no link-detect" >> /etc/quagga/vtysh.conf
+ 120 echo "interface sit0" >> /etc/quagga/vtysh.conf
+ 121 echo " no link-detect" >> /etc/quagga/vtysh.conf
+ 122 echo "router ospf" >> /etc/quagga/vtysh.conf
+ 123 echo " ospf router-id 192.168.64.2" >> /etc/quagga/vtysh.conf
+ 124 echo " log-adjacency-changes detail" >> /etc/quagga/vtysh.conf
+ 125 echo " redistribute static" >> /etc/quagga/vtysh.conf
+ 126 echo " network 172.17.0.0/16 area 0.0.0.0" >> /etc/quagga/vtysh.conf
+ 127 echo " network 192.168.64.0/24 area 0.0.0.0" >> /etc/quagga/vtysh.conf
+ 128 echo " area 0.0.0.0 authentication" >> /etc/quagga/vtysh.conf
+ 129 echo " default-information originate" >> /etc/quagga/vtysh.conf
+ 130 echo "ip route 172.17.0.0/16 192.168.64.0/24" >> /etc/quagga/vtysh.conf
+ 131 echo "ip forwarding" >> /etc/quagga/vtysh.conf
+ 132 echo"line vty" >> /etc/quagga/vtysh.conf
+ 133 echo"!" " >> /etc/quagga/vtysh.conf
+ 134 echo "log stdout" > /etc/quagga/vtysh.conf
+ 135 echo "hostname prueba" >> /etc/quagga/vtysh.conf
+ 136 echo "interface docker0" >> /etc/quagga/vtysh.conf
+ 137 echo " no link-detect" >> /etc/quagga/vtysh.conf
+ 138 echo "interface eth0" >> /etc/quagga/vtysh.conf
+ 139 echo " ip ospf authentication-key ospf1" >> /etc/quagga/vtysh.conf
+ 140 echo " no link-detect" >> /etc/quagga/vtysh.conf
+ 141 echo "interface lo" >> /etc/quagga/vtysh.conf
+ 142 echo " no link-detect" >> /etc/quagga/vtysh.conf
+ 143 echo "interface sit0" >> /etc/quagga/vtysh.conf
+ 144 echo " no link-detect" >> /etc/quagga/vtysh.conf
+ 145 echo "router ospf" >> /etc/quagga/vtysh.conf
+ 146 echo " ospf router-id 192.168.64.2" >> /etc/quagga/vtysh.conf
+ 147 echo " log-adjacency-changes detail" >> /etc/quagga/vtysh.conf
+ 148 echo " redistribute static" >> /etc/quagga/vtysh.conf
+ 149 echo " network 172.17.0.0/16 area 0.0.0.0" >> /etc/quagga/vtysh.conf
+ 150 echo " network 192.168.64.0/24 area 0.0.0.0" >> /etc/quagga/vtysh.conf
+ 151 echo " area 0.0.0.0 authentication" >> /etc/quagga/vtysh.conf
+ 152 echo " default-information originate" >> /etc/quagga/vtysh.conf
+ 153 echo "ip route 172.17.0.0/16 192.168.64.0/24" >> /etc/quagga/vtysh.conf
+ 154 echo "ip forwarding" >> /etc/quagga/vtysh.conf
+ 155 echo"line vty" >> /etc/quagga/vtysh.conf
+ 156 echo"!" " >> /etc/quagga/vtysh.conf
+ 157 cat etc/quagga/vtysh.conf 
+ 158 cd /etc/quagga/
+ 159 vtysh
+ 160 cat ospfd.conf
+ 161 show zebra.conf
+ 162 cat zebra.conf
+ 163 exit
+ 164 cd /etc/quagga/
+ 165 cat vtysh.conf 
+ 166 ifconfig docker
+ 167 ifconfig docker0
+ 168 echo "router bgp 65100" >> /etc/quagga/vtysh.conf
+ 169 echo " bgp router-id 172.17.0.1" >> /etc/quagga/vtysh.conf
+ 170 echo " address-family ipv4" >> /etc/quagga/vtysh.conf
+ 171 echo "  network 172.17.0.0/24" >> /etc/quagga/vtysh.conf
+ 172 echo "router bgp 65100" >> /etc/quagga/bgpd.conf
+ 173 echo " bgp router-id 172.17.0.1" >> /etc/quagga/bgpd.conf
+ 174 echo " address-family ipv4" >> /etc/quagga/bgpd.conf
+ 175 echo "  network 172.17.0.0/24" >> /etc/quagga/bgpd.conf
+ 176 cat bgpd.conf 
+ 177 vtysh
+ 178 cat zebra.conf
+ 179 echo "router bgp 65100" >> /etc/quagga/zebra.conf
+ 180 echo " bgp router-id 172.17.0.1" >> /etc/quagga/zebra.conf
+ 181 echo " address-family ipv4" >> /etc/quagga/zebra.conf
+ 182 echo "  network 172.17.0.0/24" >> /etc/quagga/zebra.conf
+ 183 clear
+ 184 vtysh
+ 185 exit
+ 186 vtysh
+ 187  cd /etc/quagga/
+ 188 cat zebra.conf
+ 189 nano zebra.conf
+ 190 vi zebra.conf
+ 191 vtysh
+ 192 exit
+ 193 vtysh
+ 194 cd etc/quagga/
+ 195 vi vtysh.conf 
+ 196 vtysh
+ 197 exit
+ 198 vtysh
+ 199 cd /etc/quagga/
+ 200 l
+ 201 ls
+ 202 echo "router bgp 65100" >> /etc/quagga/ospfd.conf
+ 203 echo " bgp router-id 172.17.0.1" >> /etc/quagga/ospfd.conf
+ 204 exit
+ 205 vtysh
+ 206 cd
+ 207 cd ..
+ 208 cd /etc/
+ 209 ls
+ 210 cd init.d/
+ 211 ls
+ 212 bgpd
+ 213 systemctl start bgpd.service
+ 214 clear
+ 215 exit
+ 216 cd /etc/
+ 217 cd quagga/
+ 218 vtysh
+ 219 clear
+ 220 vtysh
+ 221 chown -R quagga:quaggavty
+ 222 chmod 640 /etc/quagga/*.conf
+ 223 ls -l
+ 224 cd /usr/
+ 225 ls
+ 226 cd sbin/
+ 227 ls
+ 228 bgpd -d
+ 229 ls
+ 230 cd /etc/init.d/
+ 231 ls
+ 232 vtysh
+ 233 cat zebra 
+ 234 cd
+ 235 cd /etc/quagga/
+ 236 cat zebra.conf
+ 237 cat ospfd.conf
+ 238 cat bgpd.conf
+ 239 cat vtysh.conf 
+ 240 vi vtysh.conf 
+ 241 vtysh
+ 242 ls
+ 243 cat vtysh.log 
+ 244 ls -l
+ 245 vtysh
+ 246 cat vtysh.log 
+ 247 vtysh
+ 248 cat zebra.conf
+ 249 cat bgpd.conf
+ 250 exit
+ 251 vtysh
+ 252 clear
+ 253 vtysh
+ 254 history
+/ # 
+
+
+
+ifconfig
+   1 clear
+   2 cd /etc/quagga/
+   3 ls
+   4 cat zebra.conf 
+   5 ls -l
+   6 touch bgpd.conf
+   7 ls -l
+   8 touch quagga.log
+   9 ls -l
+  10 chown quagga bgpd.conf ospfd.conf quagga.log zebra.conf 
+  11 ls -l
+  12 chgroup quagga bgpd.conf ospfd.conf zebra.conf quagga.log 
+  13 chgrp bgpd.conf zebra.conf quagga.log ospfd.conf 
+  14 chgrp quagga bgpd.conf zebra.conf ospfd.conf quagga.log 
+  15 ls -l
+  16 clear
+  17 touch vtysh.conf
+  18 chmod 640 vtysh.conf 
+  19 chgrp quagga vtysh.conf 
+  20 chown quagga vtysh.conf 
+  21 ls -l
+  22 clear
+  23 vi vtysh.conf 
+  24 vtysh
+  25 cat zebra.conf
+  26 cat bgpd.conf 
+  27 bgpd
+  28 exit
+  29 vtysh
+  30 cd /etc/quagga/
+  31 ls
+  32 cd /usr/sbin/
+  33 ls
+  34 bgpd -d
+  35 exit
+  36 cd /etc/quagga/
+  37 vi bgpd.conf 
+  38 vtysh
+  39 cat bgpd.conf
+  40 vtysh 
+  41 cat bgpd.conf
+  42 bgpd
+  43 ifconfig
+  44 bgpd -d -K
+  45 bgpd -d -k
+  46 cd /usr/sbin/
+  47 ls
+  48 bgpd
+  49 rm -f /var/run/quagga/bgpd.pid
+  50 bgpd
+  51 vtysh
+  52 bgpd -d -k
+  53 bgpd -d
+  54 vtysh
+  55 cd
+  56 cd /etc/quagga/
+  57 ls
+  58 ls -l
+  59 cat bgpd.conf
+  60 vtysh
+  61 exit
+  62 vtysh
+  63 vtysh 
+  64 history
+ ip link add vxlan100 type vxlan id 100 dstport 4789 local 192.186.4.2 nolearning
+  70 ifconfid
+  71 ifconfig
+  72 clear
+  73 brctl addbr br100
+  74 brctl addif br100 vxlan100
+  75 brctl stp br100 off
+  76 ip link set up dev br100
+  77 ip link setup dev vxlan100
+  78 ip link set up dev vxlan100
+/ # 
