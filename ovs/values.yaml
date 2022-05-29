@@ -29,7 +29,7 @@ podSecurityContext: {}
   # fsGroup: 2000
 
 securityContext: 
-  priviliged: true
+  privileged: true
 
 service:
   type: ClusterIP
