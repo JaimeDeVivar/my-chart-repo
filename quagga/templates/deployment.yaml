@@ -15,8 +15,7 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-      	k8s.v1.cni.cncf.io/networks: tfm.accesnet
-        k8s.v1.cni.cncf.io/networks: tfm.extnet
+      	k8s.v1.cni.cncf.io/networks: accessnet,extnet
       {{- end }}
       labels:
         {{- include "vcpe.selectorLabels" . | nindent 8 }}
