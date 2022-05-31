@@ -19,8 +19,7 @@ serviceAccount:
   create: true
   # Annotations to add to the service account
   annotations:
-    - k8s.v1.cni.cncf.io/networks: accessnet,
-    - k8s.v1.cni.cncf.io/networks: extnet
+    - k8s.v1.cni.cncf.io/networks: accessnet,extnet
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
