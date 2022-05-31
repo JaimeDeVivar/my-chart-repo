@@ -15,8 +15,8 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-      	k8s.v1.cni.cncf.io/networks: accessnet,
-    	k8s.v1.cni.cncf.io/networks: extnet
+      	- k8s.v1.cni.cncf.io/networks: accessnet,
+    	- k8s.v1.cni.cncf.io/networks: extnet
       {{- end }}
       labels:
         {{- include "vclass.selectorLabels" . | nindent 8 }}
