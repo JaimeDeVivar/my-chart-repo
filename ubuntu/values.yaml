@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: Ubuntu
+  repository: ubuntu
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -25,11 +25,11 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
-  # fsGroup: 2000
-
-securityContext: 
+podSecurityContext:
   privileged: true
+
+securityContext: {}
+
   # capabilities:
   #   drop:
   #   - ALL
