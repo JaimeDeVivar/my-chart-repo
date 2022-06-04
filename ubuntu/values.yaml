@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: Ubuntu
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
@@ -25,12 +25,11 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {
-  privileged: true
-}
+podSecurityContext: {}
   # fsGroup: 2000
 
-securityContext: {}
+securityContext: 
+  privileged: true
   # capabilities:
   #   drop:
   #   - ALL
@@ -44,9 +43,8 @@ service:
 
 ingress:
   enabled: false
-  annotations: {
+  annotations: 
     k8s.v1.cni.cncf.io/networks: accessnet
-  }
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
