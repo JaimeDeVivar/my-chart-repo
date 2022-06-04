@@ -3,7 +3,7 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: "1"
-    created: "2022-06-04T18:05:55.843222943+02:00"
+    created: "2022-06-04T13:56:05.279387407+02:00"
     digest: a47cf58147e04e35ef0bf8da875991f1a280d2fb65ba1ef7996dbb2e4436fa58
     name: nginx
     urls:
@@ -12,7 +12,7 @@ entries:
   ovs:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-06-04T18:05:55.844911291+02:00"
+    created: "2022-06-04T13:56:05.280361733+02:00"
     description: A Helm chart for Kubernetes
     digest: 6f13e8c527b42e2c81fa723bf9e0f976b740d44bdbd8875f4d7cab12acda32f4
     name: ovs
@@ -22,7 +22,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-06-04T18:05:55.853133403+02:00"
+    created: "2022-06-04T13:56:05.285778461+02:00"
     description: A Helm chart for Kubernetes
     digest: 0480d63d0a53506af7ca52591ff62fa788796efffffc31e75d843ef36b69925f
     name: ovs
@@ -30,21 +30,10 @@ entries:
     urls:
     - https://jaimedevivar.github.io/my-chart-repo/borradores/ovs-0.1.0.tgz
     version: 0.1.0
-  prueba:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-06-04T18:05:55.845945005+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 16bf1306667c6f864472aa9f04946f5a37e79ed46f2c483b5d8c483ae17367b9
-    name: prueba
-    type: application
-    urls:
-    - https://jaimedevivar.github.io/my-chart-repo/prueba-0.1.0.tgz
-    version: 0.1.0
   quagga:
   - apiVersion: v2
     appVersion: "1.1"
-    created: "2022-06-04T18:05:55.846796466+02:00"
+    created: "2022-06-04T13:56:05.281718326+02:00"
     description: A Helm chart for Kubernetes
     digest: 647ba294d9ec1857fc7022a98945c0e76a5b6c7a40ba87e6c92cd2e3fe34f6fe
     name: quagga
@@ -54,7 +43,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: "1.1"
-    created: "2022-06-04T18:05:55.85406891+02:00"
+    created: "2022-06-04T13:56:05.288936182+02:00"
     description: A Helm chart for Kubernetes
     digest: 506ebbba7a4822476ac25955b00a4aec1ea1593adf98ab1c629e72bb6a552483
     name: quagga
@@ -62,23 +51,12 @@ entries:
     urls:
     - https://jaimedevivar.github.io/my-chart-repo/borradores/quagga-0.1.0.tgz
     version: 0.1.0
-  router:
-  - apiVersion: v2
-    appVersion: "1.1"
-    created: "2022-06-04T18:05:55.849365263+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 21da27def12d183becf124d7401cb04f5d405cae59bf4f33c04e0cea39ef5859
-    name: router
-    type: application
-    urls:
-    - https://jaimedevivar.github.io/my-chart-repo/router-0.1.0.tgz
-    version: 0.1.0
   ubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-04T18:05:55.850026725+02:00"
+    created: "2022-06-04T13:56:05.282119901+02:00"
     description: A Helm chart for Kubernetes
-    digest: 127e20e874563d043f4c88a28a392dd901962828165ab5e2193895c528e59998
+    digest: 061c9cc234477ba6e936e1bc637659f217fd0322e63880c425b7bbcb92c539fe
     name: ubuntu
     type: application
     urls:
@@ -87,7 +65,7 @@ entries:
   vclass:
   - apiVersion: v1
     appVersion: "1"
-    created: "2022-06-04T18:05:55.8549215+02:00"
+    created: "2022-06-04T13:56:05.289915343+02:00"
     description: A chart for using as vclass VNF
     digest: 95fb82d8e47e98425aebe5064383e8246abbdd1dfa0f81fba0d3c75e6777cbad
     name: vclass
@@ -97,7 +75,7 @@ entries:
     version: 1.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-04T18:05:55.851219975+02:00"
+    created: "2022-06-04T13:56:05.283445968+02:00"
     description: A Helm chart for Kubernetes
     digest: 30753d4d1d02b09a42a1f6e95f5c86d657caeea0d21305f32702914ac6853858
     name: vclass
@@ -108,7 +86,7 @@ entries:
   vcpe:
   - apiVersion: v1
     appVersion: "1"
-    created: "2022-06-04T18:05:55.856640739+02:00"
+    created: "2022-06-04T13:56:05.291026448+02:00"
     description: A chart for using as vcpe VNF
     digest: f87630b9f0f1c2be7f5d5e141a238219e91d6be841b4538d0ea4115cc9ac8635
     name: vcpe
@@ -118,7 +96,7 @@ entries:
     version: 1.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-04T18:05:55.852124718+02:00"
+    created: "2022-06-04T13:56:05.284640826+02:00"
     description: A Helm chart for Kubernetes
     digest: b384dd555ab12cad534a05eb324f1fd89dcb3d43182f1d9f2728bd6636de804f
     name: vcpe
@@ -126,4 +104,4 @@ entries:
     urls:
     - https://jaimedevivar.github.io/my-chart-repo/vcpe-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-04T18:05:55.840629016+02:00"
+generated: "2022-06-04T13:56:05.27745901+02:00"
