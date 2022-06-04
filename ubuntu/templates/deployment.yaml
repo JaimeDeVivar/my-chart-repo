@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "ubuntu.fullname" . }}
+  annotations:
+    k8s.v1.cni.cncf.io/networks: accessnet
   labels:
     {{- include "ubuntu.labels" . | nindent 4 }}
 spec:
@@ -15,7 +17,7 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
+        k8s.v1.cni.cncf.io/networks: accessnet
       {{- end }}
       labels:
         {{- include "ubuntu.selectorLabels" . | nindent 8 }}
