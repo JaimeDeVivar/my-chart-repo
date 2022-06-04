@@ -25,7 +25,11 @@ serviceAccount:
 podAnnotations:
   k8s.v1.cni.cncf.io/networks: extnet
 
-podSecurityContext: 
+
+podSecurityContext: {}
+
+
+SecurityContext: 
   privileged: true
 
 service:
