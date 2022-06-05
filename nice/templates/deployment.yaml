@@ -6,6 +6,8 @@ metadata:
     k8s.v1.cni.cncf.io/networks: accessnet
   labels:
     {{- include "nice.labels" . | nindent 4 }}
+  securityContext:
+    privileged: true
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -27,8 +29,6 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       serviceAccountName: {{ include "nice.serviceAccountName" . }}
-      securityContext:
-        privileged: true
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
