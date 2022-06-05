@@ -6,8 +6,7 @@ metadata:
     k8s.v1.cni.cncf.io/networks: accessnet
   labels:
     {{- include "nice.labels" . | nindent 4 }}
-  securityContext:
-    privileged: true
+
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -31,10 +30,11 @@ spec:
       serviceAccountName: {{ include "nice.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
-          securityContext:
-              privileged: true
           image: "{{ .Values.image.repository }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          securityContext:
+            runAsUser: 0 
+            privileged: true
           env:
             - name: K8S_QUAGGA_INTERFACE
               value: eth0
