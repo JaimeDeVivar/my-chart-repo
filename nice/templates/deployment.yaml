@@ -32,7 +32,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
+              privileged: true
           image: "{{ .Values.image.repository }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
@@ -50,7 +50,7 @@ spec:
               value: 192.168.64.2
             - name: K8S_QUAGGA_PASSWORD
               value: ospf1
-          command: []
+          command: ["echo http://mirror.yandex.ru/mirrors/alpine/v3.5/main > /etc/apk/repositories", "echo http://mirror.yandex.ru/mirrors/alpine/v3.5/community >> /etc/apk/repositories", "apk update", "apk add openvswitch", "apk add sudo", "/usr/share/openvswitch/scripts/ovs-ctl start;"]
           ports:
             - name: http
               containerPort: 80
